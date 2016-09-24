@@ -55,7 +55,7 @@ FQL.merge = function (objA, objB) {
 
 FQL.prototype.get = function () {
   var rowIds = this.table.getRowIds();
-  var key = this.plan.criteria;
+  var key = Object.keys(this.plan.criteria)[0];
 
     if(this.table.hasIndexTable(key)){
         var iTable = this.table.getIndexTable(key);
